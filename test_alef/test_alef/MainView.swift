@@ -85,6 +85,7 @@ class MainView: UIView {
         setupLayoutConstraints()
         setupNameStackView()
         setupAgeStackView()
+        backgroundColor = .white
     }
     
     private func setupLayouts() {

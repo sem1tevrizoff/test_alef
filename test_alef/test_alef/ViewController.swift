@@ -16,6 +16,10 @@ class ViewController: UIViewController {
     }
     
     private let mainView = MainView()
+    
+    override func loadView() {
+        view = mainView
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,8 +27,6 @@ class ViewController: UIViewController {
     }
     
     private func mainSetup() {
-        setupLayouts()
-        setupLayoutConstraints()
         addChildren()
     }
     
