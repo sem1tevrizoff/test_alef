@@ -30,22 +30,6 @@ class ViewController: UIViewController {
         addChildren()
     }
     
-    private func setupLayouts() {
-        [mainView].forEach {
-            view.addSubview($0)
-            $0.translatesAutoresizingMaskIntoConstraints = false
-        }
-    }
-    
-    private func setupLayoutConstraints() {
-        NSLayoutConstraint.activate([
-            mainView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            mainView.topAnchor.constraint(equalTo: view.topAnchor),
-            mainView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            mainView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-        ])
-    }
-    
     private func updateState() {
         setChildren(state.children)
         setupVisibleAddButton()
